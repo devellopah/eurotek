@@ -8,6 +8,10 @@
 	"engines": {
 		"node": ">=10 <=14"
 	},
+	"scripts": {
+		"build": "gulp build",
+		"postbuild": "gulp deploy"
+	},
 	"devDependencies": {
 		"@babel/core": "^7.12.10",
 		"@babel/preset-env": "^7.12.11",
