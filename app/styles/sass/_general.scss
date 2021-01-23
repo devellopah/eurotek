@@ -1,0 +1,93 @@
+// GENERAL DOCUMENT STYLES
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $secondary;
+	color: #fff;
+}
+
+input, textarea {
+	padding: 12px;
+  outline: none;
+
+	&:focus:required:invalid {
+		border-color: red;
+  }
+	&:required:valid {
+    border-color: green;
+  }
+}
+
+// body
+// 	font-family: $userfont
+// 	font-size: $fontsize
+// 	line-height: $lineheight
+// 	color: $textcolor
+// 	min-width: 320px
+// 	position: relative
+// 	overflow-x: hidden
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+svg {
+  outline: 1px solid $black;
+}
+
+.site-main {
+  flex-grow: 1;
+}
+
+.slideout-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  width: 256px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
+
+.img-fluid {
+  height: auto;
+  max-width: 100%;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-center {
+  text-align: center;
+}

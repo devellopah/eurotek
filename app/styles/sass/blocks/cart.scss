@@ -1,0 +1,33 @@
+.cart {
+  &__summary {
+    display: flex;
+  }
+  &__left {
+    position: relative;
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+  &__text {
+    font-size: 12px;
+    color: transparentize($codgray, 0.3)
+  }
+  &__count {
+    position: absolute;
+    right: -8px;
+    font-size: 11px;
+    line-height: 16px;
+    color: $white;
+    padding: 1px 3px;
+    background-color: $valencia;
+    border-radius: 50%;
+  }
+  &__total {
+    font-weight: bold;
+    font-size: 16px;
+    
+    color: $codgray;
+  }
+}

@@ -1,0 +1,16 @@
+.search {
+  &__wrapper {
+    display: flex;
+  }
+  &__input {
+    width: 100%;
+    border: 1px solid $silver;
+    border-radius: 5px 0 0 5px;
+  }
+  &__button {
+    background-color: $valencia;
+    padding: 11.5px 13px;
+    border: none;
+    border-radius: 0px 4px 4px 0px;
+  }
+}

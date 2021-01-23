@@ -1,0 +1,90 @@
+.site-header {
+  font-size: 12px;
+  &__top {
+    color: $white;
+    font-weight: 600;
+    background-color: $codgray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &-left {
+
+    }
+    &-right {
+      display: flex;
+      justify-content: space-between;
+    }
+
+  }
+
+  &__mode {}
+  &__days {
+    color: $gray
+  }
+  &__hours {}
+
+  &__pages {
+
+    &-link {
+      color: $white;
+      margin-right: 1.5em;
+      &:hover {
+        color: $valencia;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+  }
+
+  &__socials {
+    margin-left: 16px;
+  }
+
+  &__bottom {
+    background-color: $white;
+    box-shadow: 1px 0px 5px transparentize($color: $black, $amount: 0.85);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      > *:not(:first-child):not(:last-child) {
+        margin-left: 40px;
+      }
+    }
+  }
+  &__logo {
+    max-width: 230px;
+    position: relative;
+    right: 9px;
+  }
+
+  &__search {
+    flex-grow: 1;
+  }
+
+  &__catalog {
+    &-toggler {
+      color: $valencia;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 10px 36px;
+      border: 2px solid $valencia;
+      border-radius: 50px;
+    }
+    &-text {
+      margin-left: 10px;
+    }
+  }
+  &__user {
+    background-color: transparentize($codgray, 0.95);
+    padding: 12px;
+    margin-left: 16px;
+  }
+}
