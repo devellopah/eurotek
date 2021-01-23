@@ -100,6 +100,10 @@ function cleandist() {
 	return del('dist/**/*', { force: true })
 }
 
+function cleanDotPublish() {
+	return del('.publish/**/*', { force: true })
+}
+
 // function deploy() {
 // 	return src('dist/')
 // 		.pipe(rsync({
@@ -131,5 +135,5 @@ exports.styles  = styles
 exports.images  = images
 exports.deploy  = deploy
 exports.assets  = series(scripts, styles, images)
-exports.build = series(cleandist, scripts, styles, images, buildcopy, buildhtml)
+exports.build = series(cleandist, cleanDotPublish, scripts, styles, images, buildcopy, buildhtml)
 exports.default = series(scripts, styles, images, parallel(browsersync, startwatch))
