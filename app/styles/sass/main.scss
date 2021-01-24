@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
 @import 'vars';
 @import 'fonts';
-@import 'general';
 @import 'config';
+@import 'general';
 @import 'blocks/**/*';
 
 // body > header {
@@ -12,3 +12,12 @@
 // body > main > section:not(:last-child) {
 //   display: none;
 // }
+
+.promo {
+  height: 330px;
+  background-size: cover;
+}
+
+.brand {
+  padding: 16px;
+}

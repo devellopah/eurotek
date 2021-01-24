@@ -91,3 +91,20 @@ body {
 .mb-1 {
   margin-bottom: 4px;
 }
+
+.bottom-4 {
+  bottom: 16px;
+}
+
+.mx-0 {
+  margin-left: 0;
+  margin-right: 0;
+
+}
+
+.no-gutters-down-lg {
+  @include media-breakpoint-down(lg) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

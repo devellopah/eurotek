@@ -1,5 +1,8 @@
 .site-header {
   font-size: 12px;
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
   &__top {
     color: $white;
     font-weight: 600;

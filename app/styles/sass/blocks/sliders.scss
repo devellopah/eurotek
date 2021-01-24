@@ -1,8 +1,22 @@
+// .slick {
+
+//   &-arrow {
+
+//   }
+
+//   &-next {
+
+//   }
+
+//   &-prev {
+
+//   }
+
+//   &-dots {
+
+//   }
+// }
 .slider1 {
-  &__slide {
-    height: 330px;
-    background-size: cover;
-  }
   &__arrow {
     width: 36px;
     height: 48px;
@@ -32,7 +46,6 @@
   }
   &__dots {
     position: absolute;
-    bottom: 16px;
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
@@ -60,9 +73,6 @@
 }
 
 .slider2 {
-  &__slide {
-    padding: 16px;
-  }
   // &__arrow {
   //   width: 36px;
   //   height: 48px;
