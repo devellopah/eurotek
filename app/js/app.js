@@ -71,6 +71,21 @@ import Slideout from 'slideout'
 		})
 	}
 
-	initSliders();
+	$('.js-category-card-more').on('click', function(e) {
+		var $target = $(e.target)
+		var $hidden = $target.closest('.js-category-card').find('.js-category-card-children').children('.d-none')
+		var toReveal = 6
+
+		e.preventDefault()
+
+		if ($hidden > toReveal) {
+			$hidden.slice(0, toReveal).removeClass('d-none')
+		} else {
+			$hidden.removeClass('d-none')
+			$target.remove()
+		}
+	})
+
+	initSliders()
 	// console.log(Slideout)
 })(jQuery, Slideout)
