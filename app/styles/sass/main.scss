@@ -21,3 +21,40 @@
 .brand {
   padding: 16px;
 }
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+
+  &__old {
+    color: $boulder;
+    margin-right: 14px;
+  }
+
+  &__actual {
+    color: $valencia;
+  }
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  font-size: 13px;
+  line-height: 50px;
+  font-weight: 600;
+  color: $codgray;
+}
+
+.select2-container .select2-selection--single {
+  height: 50px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 48px;
+}
+
+.select2-container--default .select2-selection--single {
+  background-color: transparent;
+  border: 2px solid $silver;
+  border-radius: 0;
+}
+
+@import 'utilities';

@@ -1,9 +1,19 @@
-.category-card {
-  min-height: 358px;
+.category-block {
   background-color: $white;
-  box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
-  margin-bottom: 24px;
+
+  &--card {
+    min-height: 358px;
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+    // .category-block__main {
+    //   padding-right: 50px;
+    // }
+  }
+
+  &--standalone {
+    margin-top: 24px;
+  }
 
   &__head {
     background: $alabaster;
@@ -12,10 +22,13 @@
     height: 68px;
     display: flex;
     align-items: center;
+    // &--seashell {
+    //   background-color: $seashell;
+    // }
   }
 
   &__main {
-    padding-right: 50px;
+    padding-right: 16px;
     padding-left: 16px;
   }
 
@@ -65,6 +78,5 @@
     color: $codgray;
     font-weight: 600;
     font-size: 12px;
-    
   }
 }

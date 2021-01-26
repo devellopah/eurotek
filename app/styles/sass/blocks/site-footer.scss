@@ -36,12 +36,24 @@
     color: $valencia;
   }
   &__payment {
-    margin: 0 10px;
+    margin: 0 2px;
+    @include media-breakpoint-up(lg) {
+      margin: 0 10px;
+    }
   }
   &__socials {
 
-    &-link {
-      margin-right: 12px;
+    &-link:not(:last-child) {
+      margin-right: 8px;
+      @include media-breakpoint-up(lg) {
+        margin-right: 12px;
+      }
+    }
+  }
+  &__copy {
+    font-size: 12px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 8px;
     }
   }
 }

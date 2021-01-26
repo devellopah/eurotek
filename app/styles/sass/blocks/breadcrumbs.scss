@@ -1,0 +1,22 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+
+  &__item {
+    font-size: 14px;
+    &--link {
+
+    }
+    &--text {
+      color: transparentize($color: $black, $amount: 0.7)
+    }
+  }
+  &__dash {
+    display: inline-block;
+    width: 10px;
+    height: 1px;
+    background-color: $codgray;
+    margin: 0 10px;
+  }
+}

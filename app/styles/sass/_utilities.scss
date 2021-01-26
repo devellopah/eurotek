@@ -1,0 +1,54 @@
+.img-fluid {
+  height: auto;
+  max-width: 100%;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 4px;
+}
+
+.bottom-4 {
+  bottom: 16px;
+}
+
+.mx-0 {
+  margin-left: 0;
+  margin-right: 0;
+
+}
+
+// .no-gutters-down-lg {
+//   @include media-breakpoint-down(lg) {
+//     margin-left: 0;
+//     margin-right: 0;
+//   }
+// }
+
+.bg-seashell {
+  background-color: $seashell;
+}
+
+.flex {
+  display: flex;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.aic {
+  align-items: center;
+}
