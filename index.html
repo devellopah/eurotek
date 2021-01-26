@@ -6,10 +6,46 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="icon" href="images/favicon.png">
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+      html, body {
+        height: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 36px;
+        color: black;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
+    <div>
       <a href="/home.html">Главная</a>
+      <a href="/category.html">Категория</a>
     </div>
   </body>
 </html>
