@@ -1,0 +1,18 @@
+.qty {
+  display: flex;
+  align-items: center;
+
+  &__val {
+    width: 60px;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 500;
+    border: 0;
+    text-align: center;
+  }
+  &__action {
+    cursor: pointer;
+    &--inc {}
+    &--dec {}
+  }
+}
