@@ -4,11 +4,15 @@
 
   &__val {
     width: 60px;
-    font-size: 30px;
-    line-height: 1;
+    font-size: 18px;
     font-weight: 500;
     border: 0;
     text-align: center;
+
+    &--bigger {
+      font-size: 30px;
+      line-height: 1;
+    }
   }
   &__action {
     cursor: pointer;

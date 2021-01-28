@@ -1,0 +1,66 @@
+$block: '.custom-radio';
+
+#{$block} {
+  display: block;
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  user-select: none;
+
+  /* On mouse-over, add a grey background color */
+  // &:hover #{$block}__input:not(:checked) ~ #{$block}__checkmark {
+  //   background-color: #ccc;
+  // }
+
+  /* Hide the browser's default radio button */
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    /* Show the indicator (dot/circle) when checked */
+    &:checked ~ #{$block}__checkmark:after {
+      display: block;
+    }
+
+    &:checked ~ #{$block}__checkmark {
+      border-color: $valencia;
+    }
+
+    /* When the radio button is checked, add a blue background */
+    // &:checked ~ #{$block}__checkmark {
+    //   background-color: #2196F3;
+    // }
+  }
+  /* Create a custom radio button */
+  &__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    border: 2px solid $codgray;
+    background-color: $white;
+    border-radius: 50%;
+
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: $valencia;
+    }
+  }
+
+  &__text {
+    color: $codgray;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,204 @@
+<!--#set var="title" value="Eurotek | Главная" -->
+<!--#include virtual="/parts/header.html" -->
+
+<main class="site-main">
+  <div class="container">
+    <nav class="breadcrumbs" itemprop="breadcrumb">
+      <a href="/"
+        class="breadcrumbs__item breadcrumbs__item--link">Главная</a><span
+        class="breadcrumbs__dash"></span>
+      <span class="breadcrumbs__item breadcrumbs__item--text">Оформление</span>
+    </nav>
+  </div>
+  <div class="checkout">
+    <div class="container">
+      <h1 class="title-1">Оформление</h1>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="checkout__block">
+            <h2 class="title-2">Контактные данные</h2>
+            <form action="" class="row form">
+              <p class="col-md-6 form__control">
+                <input type="text" class="form__input" placeholder="Имя">
+              </p>
+              <p class="col-md-6 form__control">
+                <input type="text" class="form__input" placeholder="Фамилия">
+              </p>
+              <p class="col-md-6 form__control">
+                <input type="text" class="form__input" placeholder="Телефон">
+              </p>
+              <p class="col-md-6 form__control">
+                <input type="text" class="form__input" placeholder="Емайл">
+              </p>
+            </form>
+          </div>
+          <div class="checkout__block">
+            <h2 class="title-2">Доставка</h2>
+            <ul class="list-unstyled">
+              <li>
+                <h3>
+                  <label class="custom-radio">
+                    <input class="custom-radio__input" name="delivery" type="radio" value="" checked>
+                    <span class="custom-radio__checkmark"></span>
+                    <span class="custom-radio__text">Самовывоз</span>
+                </label>
+                </h3>
+              </li>
+              <li>
+                <h3>
+                  <label class="custom-radio">
+                    <input class="custom-radio__input" name="delivery" type="radio" value="">
+                      <span class="custom-radio__checkmark"></span>
+                      <span class="custom-radio__text">Наш транспорт</span>
+                  </label>
+                </h3>
+              </li>
+            </ul>
+            <form action="" class="row form">
+              <p class="col-md-6 form__control">
+                <input type="text" class="form__input" placeholder="Имя">
+              </p>
+              <p class="col-md-6 form__control">
+                <input type="text" class="form__input" placeholder="Фамилия">
+              </p>
+              <p class="col-md-6 form__control">
+                <input type="text" class="form__input" placeholder="Телефон">
+              </p>
+              <p class="col-md-6 form__control">
+                <input type="text" class="form__input" placeholder="Емайл">
+              </p>
+            </form>
+          </div>
+          <div class="checkout__block">
+            <h2 class="title-2">Оплата</h2>
+            <ul class="list-unstyled">
+              <li>
+                <h3>
+                  <label class="custom-radio">
+                    <input class="custom-radio__input" name="payment" type="radio"
+                      value="" checked>
+                    <span class="custom-radio__checkmark"></span>
+                    <span class="custom-radio__text">Яндекс Деньги</span>
+                  </label>
+                </h3>
+              </li>
+              <li>
+                <h3>
+                  <label class="custom-radio">
+                    <input class="custom-radio__input" name="payment" type="radio"
+                      value="">
+                    <span class="custom-radio__checkmark"></span>
+                    <span class="custom-radio__text">Наличные</span>
+                  </label>
+                </h3>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="checkout__block">
+            <div class="checkout-cart">
+              <a href="#" class="checkout-cart__cleansing">Очистить корзину</a>
+              <h2 class="title-2">Состав заказа:</h2>
+              <div class="checkout-cart__item">
+                <div class="flex jcsb">
+                  <div class="checkout-cart__item-title">
+                    Плита OSB-3 Kronospan 9 мм 2500x1250 мм 3.125 м²
+                  </div>
+                  <a href="#" class="checkout-cart__item-delete">
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0.999919 10.6667C0.999919 11.4 1.59992 12 2.33325 12H7.66659C8.39992 12 8.99992 11.4 8.99992 10.6667V2.66667H0.999919V10.6667ZM2.33325 4H7.66659V10.6667H2.33325V4ZM7.33325 0.666667L6.66659 0H3.33325L2.66659 0.666667H0.333252V2H9.66659V0.666667H7.33325Z"
+                        fill="#1D1919" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="flex jcsb aic">
+                  <span class="checkout-cart__item-price">Цена: <strong>510 ₽</strong></span>
+                  <span class="qty">
+                    <span class="qty__action qty__action--inc">
+                      <svg width="14" height="2" viewBox="0 0 14 2" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 2H0V0H14V2Z" fill="#1D1919" />
+                      </svg>
+                    </span>
+                    <input class="qty__val" type="number" name="quantity" min="1" max="" step="1"
+                      value="1">
+                    <span class="qty__action qty__action--dec">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="#1D1919" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div class="checkout-cart__item">
+                <div class="flex jcsb">
+                  <div class="checkout-cart__item-title">
+                    Плита OSB-3 Kronospan 9 мм 2500x1250 мм 3.125 м²
+                  </div>
+                  <a href="#" class="checkout-cart__item-delete">
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0.999919 10.6667C0.999919 11.4 1.59992 12 2.33325 12H7.66659C8.39992 12 8.99992 11.4 8.99992 10.6667V2.66667H0.999919V10.6667ZM2.33325 4H7.66659V10.6667H2.33325V4ZM7.33325 0.666667L6.66659 0H3.33325L2.66659 0.666667H0.333252V2H9.66659V0.666667H7.33325Z"
+                        fill="#1D1919" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="flex jcsb aic">
+                  <span class="checkout-cart__item-price">Цена: <strong>510 ₽</strong></span>
+                  <span class="qty">
+                    <span class="qty__action qty__action--inc">
+                      <svg width="14" height="2" viewBox="0 0 14 2" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 2H0V0H14V2Z" fill="#1D1919" />
+                      </svg>
+                    </span>
+                    <input class="qty__val" type="number" name="quantity" min="1" max=""
+                      step="1" value="1">
+                    <span class="qty__action qty__action--dec">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="#1D1919" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div class="checkout-cart__summary checkout-cart__summary--result">
+                <span class="fz-4 fw-600">Ваш заказ</span>
+                <span class="boulder">2 товара</span>
+              </div>
+              <div class="checkout-cart__summary checkout-cart__summary--products">
+                <span>Товары (2)</span>
+                <span class="fw-600">598 ₽</span>
+              </div>
+              <div class="checkout-cart__summary checkout-cart__summary--discount">
+                <span>Скидка</span>
+                <span class="fw-600 valencia">- 270 ₽</span>
+              </div>
+              <div class="checkout-cart__summary checkout-cart__summary--delivery">
+                <span>Стоимость доставки</span>
+                <span class="fw-600">270 ₽</span>
+              </div>
+              <div class="checkout-cart__summary checkout-cart__summary--total">
+                <span>Итого:</span>
+                <span>8 271 ₽</span>
+              </div>
+              <button class="btn w-full mb-2">Оплатить</button>
+              <div class="fz-3 coldgray">Нажимая «Оформить заказ», Вы даёте Согласие на обработку Ваших персональных
+              данных и принимаете Пользовательское соглашение.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!--#include virtual="/parts/footer.html" -->

@@ -1,0 +1,14 @@
+.checkout-message {
+  max-width: 600px;
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 36px;
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}

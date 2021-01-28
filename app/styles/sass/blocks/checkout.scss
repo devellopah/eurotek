@@ -1,0 +1,10 @@
+.checkout {
+
+  &__block {
+    padding: 24px;
+    margin-bottom: 24px;
+    background-color: $white;
+    box-shadow: 0px 1px 4px transparentize($color: $black, $amount: 0.92);
+    border-radius: 5px;
+  }
+}

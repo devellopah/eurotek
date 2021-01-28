@@ -15,6 +15,11 @@
   margin-bottom: 24px;
 }
 
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
 
 .mx-auto {
   margin-left: auto;
@@ -57,6 +62,10 @@
   width: 100%;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .bottom-4 {
   bottom: 16px;
 }
@@ -82,6 +91,10 @@
   display: flex;
 }
 
+.fdc {
+  flex-direction: column;
+}
+
 .jcc {
   justify-content: center;
 }
@@ -92,4 +105,28 @@
 
 .aic {
   align-items: center;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fz-3 {
+  font-size: 12px;
+}
+
+.fz-4 {
+  font-size: 16px;
+}
+
+.valencia {
+  color: $valencia;
+}
+
+.boulder {
+  color: $boulder;
+}
+
+.codgray {
+  color: $codgray;
 }
