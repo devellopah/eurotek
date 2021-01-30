@@ -5,6 +5,23 @@ import Slideout from 'slideout'
 
 (function ($, Slideout) {
 
+	var slideout = new Slideout({
+		'panel': document.getElementById('panel'),
+		'menu': document.getElementById('menu'),
+		'padding': 256,
+		'tolerance': 70
+	});
+
+	// Toggle button
+	$('#hamburger').on('click', function () {
+		slideout.toggle();
+		var hiddenSvg = $(this).children(':hidden')
+		var visibleSvg = $(this).children(':visible')
+
+		hiddenSvg.show()
+		visibleSvg.hide()
+	});
+
 	function initSliders() {
 		var sliderTheme1NextArrowIcon = '<svg class="slider-theme-1__arrow-icon slider-theme-1__next-icon" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.84627 12.0171L6.88898 7.00158L1.84628 1.98605" stroke="white" stroke-width="2" stroke-linecap="round" /></svg>'
 		var sliderTheme1PrevArrowIcon = '<svg class="slider-theme-1__arrow-icon slider-theme-1__prev-icon" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.15373 1.98293L2.11102 6.99845L7.15373 12.014" stroke="white" stroke-width="2" stroke-linecap="round" /></svg>'

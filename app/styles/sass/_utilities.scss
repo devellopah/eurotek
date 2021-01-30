@@ -6,13 +6,16 @@
 .title-1 {
   font-size: 32px;
   font-weight: 600;
-  margin-bottom: 20px;
 }
 
 .title-2 {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 600;
-  margin-bottom: 24px;
+}
+
+.title-3 {
+  font-size: 16px;
+  font-weight: 60;
 }
 
 .list-unstyled {
@@ -75,13 +78,6 @@
   margin-right: 0;
 
 }
-
-// .no-gutters-down-lg {
-//   @include media-breakpoint-down(lg) {
-//     margin-left: 0;
-//     margin-right: 0;
-//   }
-// }
 
 .bg-seashell {
   background-color: $seashell;

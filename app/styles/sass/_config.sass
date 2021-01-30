@@ -7,6 +7,17 @@
 		font-weight: $fweight
 		src: url($furl) format('woff2')
 
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context)
+  @if (unitless($pixels))
+    $pixels: $pixels * 1px
+
+  @if (unitless($context))
+    $context: $context * 1px
+
+  @return $pixels / $context * 1em
+
 @import "node_modules/bootstrap/scss/functions"
 @import "node_modules/bootstrap/scss/variables"
 @import "node_modules/bootstrap/scss/mixins/_breakpoints"

@@ -1,4 +1,8 @@
 .cart {
+
+  @include media-breakpoint-down($breakpoint-down) {
+    font-size: 9px;
+  }
   &__summary {
     display: flex;
   }
@@ -8,26 +12,36 @@
   &__right {
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
+    margin-left: em(20, 12);
   }
   &__text {
-    font-size: 12px;
+    font-size: em(12, 12);
     color: transparentize($codgray, 0.3)
   }
   &__count {
     position: absolute;
     right: -8px;
-    font-size: 11px;
-    line-height: 16px;
+    font-size: em(11, 12);
+    line-height: em(16, 11);
     color: $white;
-    padding: 1px 3px;
+    padding: em(1, 11) em(3, 11);
     background-color: $valencia;
     border-radius: 50%;
+
+    @include media-breakpoint-down($breakpoint-down) {
+      top: 3px;
+      right: -3px;
+    }
   }
   &__total {
     font-weight: bold;
-    font-size: 16px;
-    
+    font-size: em(16, 12);
     color: $codgray;
+  }
+
+  &__icon {
+    @include media-breakpoint-down($breakpoint-down) {
+      transform: scale(.75);
+    }
   }
 }

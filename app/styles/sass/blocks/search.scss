@@ -1,4 +1,8 @@
 .search {
+
+  @include media-breakpoint-down($breakpoint-down) {
+    font-size: 8px;
+  }
   &__wrapper {
     display: flex;
   }
@@ -6,11 +10,18 @@
     width: 100%;
     border: 1px solid $silver;
     border-radius: 5px 0 0 5px;
+    padding: em(12)
   }
   &__button {
     background-color: $valencia;
-    padding: 11.5px 13px;
+    padding: em(11.5) em(13);
     border: none;
     border-radius: 0px 4px 4px 0px;
+  }
+
+  &__icon {
+    @include media-breakpoint-down($breakpoint-down) {
+      transform: scale(.75);
+    }
   }
 }
