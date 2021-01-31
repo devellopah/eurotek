@@ -8,7 +8,7 @@
   }
   &__top {
     color: $white;
-    font-weight: 600;
+    font-weight: 700;
     background-color: $codgray;
     padding: 6.5px 0;
     position: relative;
@@ -49,6 +49,10 @@
         color: $valencia;
       }
     }
+  }
+
+  &__tel {
+    color: inherit;
   }
 
   &__contacts {
