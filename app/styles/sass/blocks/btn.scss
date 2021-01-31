@@ -6,10 +6,10 @@
   color: $white;
   padding: 12px 24px;
   border: none;
-  display: inline-block;
-  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  vertical-align: middle;
   cursor: pointer;
   user-select: none;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;

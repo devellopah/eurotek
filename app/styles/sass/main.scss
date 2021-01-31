@@ -24,15 +24,16 @@
 
 .price {
   font-size: 20px;
-  font-weight: bold;
 
   &__old {
     color: $boulder;
-    margin-right: 14px;
+    font-weight: 600;
+    margin-right: 8px;
   }
 
   &__actual {
-    color: $valencia;
+    color: $black;
+    font-weight: 700;
   }
 }
 

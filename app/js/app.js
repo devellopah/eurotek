@@ -5,22 +5,41 @@ import Slideout from 'slideout'
 
 (function ($, Slideout) {
 
-	var slideout = new Slideout({
-		'panel': document.getElementById('panel'),
-		'menu': document.getElementById('menu'),
-		'padding': 256,
-		'tolerance': 70
-	});
 
-	// Toggle button
-	$('#hamburger').on('click', function () {
-		slideout.toggle();
-		var hiddenSvg = $(this).children(':hidden')
-		var visibleSvg = $(this).children(':visible')
+	function initMobileMenu() {
+		var slideout = new Slideout({
+			'panel': document.getElementById('panel'),
+			'menu': document.getElementById('menu'),
+			'padding': 256,
+			'tolerance': 70
+		});
 
-		hiddenSvg.show()
-		visibleSvg.hide()
-	});
+		// Toggle button
+		$('#hamburger').on('click', function () {
+			slideout.toggle();
+			var hiddenSvg = $(this).children(':hidden')
+			var visibleSvg = $(this).children(':visible')
+
+			hiddenSvg.show()
+			visibleSvg.hide()
+		});
+
+	}
+
+	function toggleCategoryMode() {
+		$('.js-category-mode').on('click', function() {
+			var $mode = $(this)
+			var $productCards = $('.product-card')
+
+			if ($mode.data('mode').trim() === 'wide') {
+				$productCards.addClass('product-card--wide')
+				$productCards.parent().removeClass('col-sm-6 col-md-4')
+			} else {
+				$productCards.removeClass('product-card--wide')
+				$productCards.parent().addClass('col-sm-6 col-md-4')
+			}
+		})
+	}
 
 	function initSliders() {
 		var sliderTheme1NextArrowIcon = '<svg class="slider-theme-1__arrow-icon slider-theme-1__next-icon" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.84627 12.0171L6.88898 7.00158L1.84628 1.98605" stroke="white" stroke-width="2" stroke-linecap="round" /></svg>'
@@ -112,6 +131,13 @@ import Slideout from 'slideout'
 		})
 	}
 
+	function initSelects() {
+		$('.js-select').select2({
+			minimumResultsForSearch: -1,
+			width: "100%"
+		})
+	}
+
 	$('.js-category-block-more').on('click', function(e) {
 		var $target = $(e.target)
 		var $hidden = $target.closest('.js-category-block').find('.js-category-block-children').children('.d-none')
@@ -128,9 +154,7 @@ import Slideout from 'slideout'
 	})
 
 	initSliders()
-	$('.js-select').select2({
-		minimumResultsForSearch: -1,
-		width: "100%"
-	})
-	// console.log(Slideout)
+	initSelects()
+	toggleCategoryMode()
+	initMobileMenu()
 })(jQuery, Slideout)
