@@ -54,6 +54,8 @@ import Slideout from 'slideout'
 			var $mode = $(this)
 			var $productCards = $('.product-card')
 
+			$mode.addClass('category__mode--active').siblings().removeClass('category__mode--active')
+
 			if ($mode.data('mode').trim() === 'wide') {
 				$productCards.addClass('product-card--wide')
 				$productCards.parent().removeClass('col-sm-6 col-md-4')

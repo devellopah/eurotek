@@ -1,0 +1,112 @@
+// SLIDEOUTJS
+// STYLES
+// OVERRIDES
+
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  display: none;
+}
+
+.slideout-menu-left {
+  left: 0;
+}
+
+.slideout-menu-right {
+  right: 0;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  background-color: inherit; /* A background-color is required */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+  background-color: $mineshaft;
+  padding-top: 40px;
+  color: $white;
+  padding-left: 14px;
+}
+
+.slideout-panel:before {
+  content: '';
+  display: block;
+  background-color: $black;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.slideout-panel--open:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: transparentize($color: $black, $amount: .5);
+  z-index: 99;
+}
+
+// SELECT2
+// STYLES
+// OVERRIDES
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  font-size: 13px;
+  line-height: 50px;
+  font-weight: 600;
+  color: $codgray;
+}
+
+.select2-container .select2-selection--single {
+  height: 50px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  background-image: url(../../images/dist/icons/select-arrow.svg);
+  background-color: transparent;
+  background-size: contain;
+  border: none !important;
+  height: 7.5px !important;
+  width: 12px !important;
+  margin: auto !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+.select2-container--default .select2-selection--single {
+  background-color: transparent;
+  border: 2px solid $silver;
+  border-radius: 0;
+}
+
+.select2-results__option--selectable {
+  font-size: 14px;
+  color: $codgray;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  color: $codgray;
+  background-color: $gallery;
+}

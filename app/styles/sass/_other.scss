@@ -1,0 +1,52 @@
+// body > header {
+//   display: none;
+// }
+
+// body > main > section:not(:last-child) {
+//   display: none;
+// }
+
+.site-main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pages-links {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    font-size: 13px;
+    color: $alabaster;
+    padding: 8px 0;
+    &:hover {
+      color: $valencia;
+    }
+  }
+}
+
+.promo {
+  height: 330px;
+  background-size: cover;
+}
+
+.brand {
+  padding: 16px;
+}
+
+.price {
+  font-size: 20px;
+
+  &__old {
+    color: $boulder;
+    font-weight: 600;
+    margin-right: 8px;
+  }
+
+  &__actual {
+    color: $black;
+    font-weight: 700;
+  }
+}

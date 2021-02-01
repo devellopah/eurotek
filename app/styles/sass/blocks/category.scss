@@ -21,6 +21,16 @@
   &__mode {
     cursor: pointer;
     margin-left: 20px;
+
+    &--active .category__mode-svgRect {
+      fill: $valencia;
+      stroke: $valencia;
+    }
+
+    &-svgRect {
+      fill: $black;
+      stroke: $black;
+    }
   }
   &__filters {
     text-align: right;

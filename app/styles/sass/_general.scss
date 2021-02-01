@@ -1,12 +1,13 @@
 // GENERAL DOCUMENT STYLES
 
 ::placeholder {
-	color: #666;
+  font-size: 12px;
+	color: $chalice;
 }
 
 ::selection {
 	background-color: $secondary;
-	color: #fff;
+	color: $white;
 }
 
 input, textarea {
@@ -14,21 +15,12 @@ input, textarea {
   outline: none;
 
 	&:focus:required:invalid {
-		border-color: red;
+		border-color: $valencia;
   }
 	&:required:valid {
-    border-color: green;
+    border-color: $cucumber;
   }
 }
-
-// body
-// 	font-family: $userfont
-// 	font-size: $fontsize
-// 	line-height: $lineheight
-// 	color: $textcolor
-// 	min-width: 320px
-// 	position: relative
-// 	overflow-x: hidden
 
 html, body {
   height: 100%;
@@ -39,18 +31,6 @@ body {
   width: 100%;
   min-width: 320px;
 }
-
-// input[type=password],
-// input[type=submit],
-// input[type=search],
-// input[type=text],
-// input[type=number],
-// input[type=emal],
-// input[type=tel],
-// select,
-// textarea {
-//   width: 100%;
-// }
 
 // hide arrows
 input[type="number"]::-webkit-outer-spin-button,
@@ -65,86 +45,4 @@ input[type="number"] {
 input[type="number"]:hover,
 input[type="number"]:focus {
   -moz-appearance: number-input;
-}
-
-.site-main {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.slideout-menu {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 256px;
-  min-height: 100vh;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  z-index: 0;
-  display: none;
-}
-
-.slideout-menu-left {
-  left: 0;
-}
-
-.slideout-menu-right {
-  right: 0;
-}
-
-.slideout-panel {
-  position: relative;
-  z-index: 1;
-  will-change: transform;
-  background-color: inherit; /* A background-color is required */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.slideout-open,
-.slideout-open body,
-.slideout-open .slideout-panel {
-  overflow: hidden;
-}
-
-.slideout-open .slideout-menu {
-  display: block;
-  background-color: $mineshaft;
-  padding-top: 40px;
-  color: $white;
-  padding-left: 14px;
-}
-
-.slideout-panel:before {
-  content: '';
-  display: block;
-  background-color: rgba(0,0,0,0);
-  transition: background-color 0.5s ease-in-out;
-}
-
-.slideout-panel--open:before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(0,0,0,.5);
-  z-index: 99;
-}
-
-.pages-links {
-  display: flex;
-  flex-direction: column;
-
-  &__item {
-    font-size: 13px;
-    color: $alabaster;
-    padding: 8px 0;
-    &:hover {
-      color: $valencia;
-    }
-  }
-
 }
