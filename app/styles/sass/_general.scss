@@ -38,8 +38,6 @@ html, body {
 body {
   width: 100%;
   min-width: 320px;
-  display: flex;
-  flex-direction: column;
 }
 
 // input[type=password],
@@ -71,25 +69,39 @@ input[type="number"]:focus {
 
 .site-main {
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .slideout-menu {
   position: fixed;
-  left: 0;
   top: 0;
   bottom: 0;
-  right: 0;
-  z-index: 0;
   width: 256px;
+  min-height: 100vh;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+  z-index: 0;
   display: none;
+}
+
+.slideout-menu-left {
+  left: 0;
+}
+
+.slideout-menu-right {
+  right: 0;
 }
 
 .slideout-panel {
   position: relative;
   z-index: 1;
   will-change: transform;
+  background-color: inherit; /* A background-color is required */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .slideout-open,
@@ -100,4 +112,39 @@ input[type="number"]:focus {
 
 .slideout-open .slideout-menu {
   display: block;
+  background-color: $mineshaft;
+  padding-top: 40px;
+  color: $white;
+  padding-left: 14px;
+}
+
+.slideout-panel:before {
+  content: '';
+  display: block;
+  background-color: rgba(0,0,0,0);
+  transition: background-color 0.5s ease-in-out;
+}
+
+.slideout-panel--open:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,.5);
+  z-index: 99;
+}
+
+.pages-links {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    font-size: 13px;
+    color: $alabaster;
+    padding: 8px 0;
+    &:hover {
+      color: $valencia;
+    }
+  }
+
 }

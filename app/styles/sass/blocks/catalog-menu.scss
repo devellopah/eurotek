@@ -1,0 +1,42 @@
+.catalog-menu {
+  background-color: $white;
+  width: 100%;
+  max-width: 1110px;
+  border: 1px solid $silver;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 15px transparentize($color: $black, $amount: 0.9);
+  position: fixed;
+  top: 126px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  &__close {}
+  &__inner {
+    display: flex;
+  }
+  &__column {
+    width: 33%;
+    &:first-child {
+      flex-grow: 1;
+    }
+  }
+  &__list {
+
+  }
+  &__item {
+    height: 44px;
+    padding: 8px 20px 12px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--active {
+      background-color: $gallery;
+    }
+  }
+  &__link {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  &__arrow {}
+}

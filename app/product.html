@@ -55,7 +55,7 @@
                     <!-- price -->
                     <div class="add2cart product__add2cart">
                       <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-6">
                           <span class="product__add2cart-text">Кол-во штук</span>
                           <span class="qty">
                             <span class="qty__action qty__action--inc">
@@ -74,9 +74,12 @@
                             </span>
                           </span>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-6">
                           <span class="product__add2cart-text">Цена за штуку</span>
-                          <div class="product__price">510 ₽</div>
+                          <span class="product__price">
+                            <span class="product__price-old">10000 ₽</span>
+                            <span class="product__price-actual">7000 ₽</span>
+                          </span>
                         </div>
                       </div>
                       <button class="btn w-full m-t-4" type="submit">
@@ -91,7 +94,31 @@
                     </div>
                   </div>
                 </form>
-                <!-- plugin hook: 'frontend_product.cart' -->
+                <span class="product__icons">
+                  <a class="product__icons-item" href="#">
+                    <svg class="m-r-2" width="23" height="23" viewBox="0 0 23 23" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11.5" cy="11.5" r="11" stroke="#8C8C8C" />
+                      <path d="M7.95715 16.1678V12.7288" stroke="#8C8C8C" stroke-width="1.2"
+                        stroke-linecap="round" />
+                      <path d="M11.4681 16.1677L11.4681 5.89746" stroke="#8C8C8C"
+                        stroke-width="1.2" stroke-linecap="round" />
+                      <path d="M15.0421 16.1677L15.0421 9.38916" stroke="#8C8C8C"
+                        stroke-width="1.2" stroke-linecap="round" />
+                    </svg>
+                    В сравнение
+                  </a>
+                  <a class="product__icons-item" href="#">
+                    <svg class="m-r-2" width="23" height="23" viewBox="0 0 23 23" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11.5" cy="11.5" r="11" stroke="#8C8C8C" />
+                      <path
+                        d="M11.377 8.94878L11.8031 9.37868L12.2292 8.94878C12.7509 8.42249 13.5862 7.7875 14.484 7.7875C15.341 7.7875 16.0296 8.07351 16.5003 8.52636C16.9693 8.97759 17.2584 9.62898 17.2584 10.4339C17.2584 11.3055 16.9071 12.0412 16.3268 12.7383C15.7349 13.4494 14.9401 14.0799 14.0957 14.7468L14.0817 14.7578C13.3129 15.3647 12.4659 16.0332 11.8034 16.7838C11.1474 16.0394 10.3082 15.376 9.5459 14.7734L9.51247 14.747L9.51222 14.7468C8.66759 14.0797 7.87291 13.449 7.28121 12.738C6.70108 12.0409 6.35 11.3053 6.35 10.4339C6.35 9.62899 6.63913 8.97761 7.10816 8.52639C7.57889 8.07354 8.26762 7.7875 9.12494 7.7875C10.0218 7.7875 10.8548 8.42202 11.377 8.94878Z"
+                        stroke="#8C8C8C" stroke-width="1.2" />
+                    </svg>
+                    В избранное
+                  </a>
+                </span>
               </div>
             </div>
             <div class="col-md-6 col-xl-12">
@@ -192,10 +219,10 @@
       </div>
     </div>
     <div class="container">
-      <div class="m-b-4 product__materials">
-        <a class="product__tab product__tab--active" href="#description">Описание</a>
-        <a class="product__tab" href="#docs">Документация</a>
-        <a class="product__tab" href="#certificates">Сертификаты</a>
+      <div class="product__materials">
+        <a class="m-b-4 product__tab product__tab--active" href="#description">Описание</a>
+        <a class="m-b-4 product__tab" href="#docs">Документация</a>
+        <a class="m-b-4 product__tab" href="#certificates">Сертификаты</a>
       </div>
       <div id="description" class="product__description">
         Плита OSB-3 от KRONOSPAN толщиной 9 мм, размер листа 1250 х 2500 мм, рабочая

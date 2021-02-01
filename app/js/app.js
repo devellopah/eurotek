@@ -14,16 +14,39 @@ import Slideout from 'slideout'
 			'tolerance': 70
 		});
 
-		// Toggle button
-		$('#hamburger').on('click', function () {
-			slideout.toggle();
-			var hiddenSvg = $(this).children(':hidden')
-			var visibleSvg = $(this).children(':visible')
+		var $hamburger = $('#hamburger')
 
-			hiddenSvg.show()
-			visibleSvg.hide()
+		function close(eve) {
+			eve.preventDefault();
+			slideout.close();
+		}
+
+		slideout
+			.on('beforeopen', function () {
+				this.panel.classList.add('slideout-panel--open');
+			})
+			.on('open', function () {
+				this.panel.addEventListener('click', close);
+			})
+			.on('beforeclose', function () {
+				this.panel.classList.remove('slideout-panel--open');
+				this.panel.removeEventListener('click', close);
+				switchHamburgerIcons()
+			});
+
+		// Toggle button
+		$hamburger.on('click', function () {
+			slideout.toggle();
+			switchHamburgerIcons()
 		});
 
+		function switchHamburgerIcons() {
+			var $hiddenSvg = $hamburger.children(':hidden')
+			var $visibleSvg = $hamburger.children(':visible')
+
+			$hiddenSvg.show()
+			$visibleSvg.hide()
+		}
 	}
 
 	function toggleCategoryMode() {
@@ -58,7 +81,7 @@ import Slideout from 'slideout'
 		})
 
 		$('.js-slider-2').slick({
-			slidesToShow: 1,
+			slidesToShow: 2,
 			slidesToScroll: 1,
 			infinite: true,
 			mobileFirst: true,
@@ -85,11 +108,6 @@ import Slideout from 'slideout'
 				breakpoint: 768,
 				settings: {
 					slidesToShow: 3,
-				}
-			}, {
-				breakpoint: 576,
-				settings: {
-					slidesToShow: 2,
 				}
 			}]
 
@@ -138,6 +156,31 @@ import Slideout from 'slideout'
 		})
 	}
 
+	function initCatalogMenu() {
+		var $menuRevealer = $('#catalog-menu-revealer')
+		var $menuConcealer = $('#catalog-menu-concealer')
+		var $subMenuRevealer = $('.js-submenu-revealer')
+		var parentActiveClass = 'catalog-menu__item--active'
+
+		$subMenuRevealer.on('click', function(e) {
+			e.preventDefault()
+
+			$(this.hash).siblings().hide().end().show()
+			$(this).parent().addClass(parentActiveClass).siblings().removeClass(parentActiveClass)
+		})
+
+		$menuRevealer.on('click', function (e) {
+			e.preventDefault()
+			$(this.hash).show()
+			$menuConcealer.show()
+		})
+		$menuConcealer.on('click', function (e) {
+			e.preventDefault()
+			$(this.hash).hide()
+			$menuConcealer.hide()
+		})
+	}
+
 	$('.js-category-block-more').on('click', function(e) {
 		var $target = $(e.target)
 		var $hidden = $target.closest('.js-category-block').find('.js-category-block-children').children('.d-none')
@@ -157,4 +200,5 @@ import Slideout from 'slideout'
 	initSelects()
 	toggleCategoryMode()
 	initMobileMenu()
+	initCatalogMenu()
 })(jQuery, Slideout)

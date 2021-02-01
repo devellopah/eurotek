@@ -57,9 +57,30 @@
     }
   }
   &__price {
-    font-size: 52px;
-    color: $codgray;
-    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    &-old {
+      color: $boulder;
+      font-size: 24px;
+      font-weight: 500;
+    }
+    &-actual {
+      color: $codgray;
+      font-size: 36px;
+      font-weight: 600;
+    }
+  }
+  &__icons {
+    font-size: 12px;
+    display: flex;
+    margin-top: 24px;
+
+    &-item {
+      color: $boulder;
+      display: flex;
+      align-items: center;
+      margin-right: 30px;
+    }
   }
   &__cart {
     background-color: $white;
@@ -69,6 +90,7 @@
     color: $gray;
     font-weight: 600;
     margin-right: 16px;
+    display: inline-block;
 
     &--active {
       color: $black;

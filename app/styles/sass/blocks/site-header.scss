@@ -116,17 +116,38 @@
   }
 
   &__catalog {
-    &-toggler {
-      color: $valencia;
-      display: flex;
-      align-items: center;
+    position: relative;
+    
+    &-action {
       font-size: 14px;
       font-weight: bold;
+      color: $valencia;
+      border-width: 2px;
+      border-style: solid;
       padding: 10px 36px;
-      border: 2px solid $valencia;
-      border-radius: 50px;
-      @include media-breakpoint-up(lg) {
-        margin-left: 40px;
+      &:hover {
+        color: $valencia;
+      }
+      &--revealer {
+        display: flex;
+        align-items: center;
+        border-color: $valencia;
+        border-radius: 50px;
+        @include media-breakpoint-up(lg) {
+          margin-left: 40px;
+        }
+      }
+      &--concealer {
+        background-color: $white;
+        position: absolute;
+        top: 0;
+        bottom: -20px;
+        right: 0;
+        z-index: 1;
+        border-color: $gallery;
+        border-bottom: 0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
       }
     }
     &-text {
