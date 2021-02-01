@@ -16,9 +16,110 @@
 </head>
 
 <body>
+	<div id="catalog-menu" class="catalog-menu" style="display: none;">
+		<div class="catalog-menu__close"></div>
+		<div class="catalog-menu__inner">
+			<div class="catalog-menu__column">
+				<ul class="list-unstyled catalog-menu__list">
+					<li class="catalog-menu__item">
+						<a href="#" class="catalog-menu__link">Сантехника</a>
+						<a href="#cat1" class="catalog-menu__arrow js-submenu-revealer">
+							<svg width="5" height="6" viewBox="0 0 5 6" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1L3 3L1 5" stroke="black" stroke-width="1.6"
+									stroke-linecap="round" />
+							</svg>
+						</a>
+					</li>
+					<li class="catalog-menu__item">
+						<a href="#" class="catalog-menu__link">Котельное оборудование</a>
+						<a href="#cat2" class="catalog-menu__arrow js-submenu-revealer">
+							<svg width="5" height="6" viewBox="0 0 5 6" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1L3 3L1 5" stroke="black" stroke-width="1.6"
+									stroke-linecap="round" />
+							</svg>
+						</a>
+					</li>
+					<li class="catalog-menu__item">
+						<a href="#" class="catalog-menu__link">Радиаторы</a>
+					</li>
+					<li class="catalog-menu__item">
+						<a href="#" class="catalog-menu__link">Трубы и шланги</a>
+					</li>
+					<li class="catalog-menu__item">
+						<a href="#" class="catalog-menu__link">Фитинги для труб</a>
+					</li>
+					<li class="catalog-menu__item">
+						<a href="#" class="catalog-menu__link">Запорная арматура</a>
+					</li>
+					<li class="catalog-menu__item">
+						<a href="#" class="catalog-menu__link">Насосное оборудование</a>
+					</li>
+				</ul>
+			</div>
+			<div class="catalog-menu__column">
+				<ul id="cat1" style="display: none;" class="list-unstyled catalog-menu__list">
+					<li class="catalog-menu__item">
+						<a href="#" class="catalog-menu__link">Сантехника дочерняя 1</a>
+						<a href="#" class="catalog-menu__arrow js-submenu-revealer">
+							<svg width="5" height="6" viewBox="0 0 5 6" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1L3 3L1 5" stroke="black" stroke-width="1.6"
+									stroke-linecap="round" />
+							</svg>
+						</a>
+					</li>
+					<li class="catalog-menu__item">
+						<a href="#" class="catalog-menu__link">Сантехника дочерняя 2</a>
+						<a href="#" class="catalog-menu__arrow js-submenu-revealer">
+							<svg width="5" height="6" viewBox="0 0 5 6" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1L3 3L1 5" stroke="black" stroke-width="1.6"
+									stroke-linecap="round" />
+							</svg>
+						</a>
+					</li>
+					<li class="catalog-menu__item">
+						<a href="#" class="catalog-menu__link">Сантехника дочерняя 3</a>
+					</li>
+				</ul>
+				<ul id="cat2" style="display: none;" class="list-unstyled catalog-menu__list">
+					<li class="catalog-menu__item">
+						<a href="#" class="catalog-menu__link">Котельное оборудование дочерняя 1</a>
+						<a href="#" class="catalog-menu__arrow js-submenu-revealer">
+							<svg width="5" height="6" viewBox="0 0 5 6" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1L3 3L1 5" stroke="black" stroke-width="1.6"
+									stroke-linecap="round" />
+							</svg>
+						</a>
+					</li>
+					<li class="catalog-menu__item">
+						<a href="#" class="catalog-menu__link">Котельное оборудование дочерняя 2</a>
+						<a href="#" class="catalog-menu__arrow js-submenu-revealer">
+							<svg width="5" height="6" viewBox="0 0 5 6" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1L3 3L1 5" stroke="black" stroke-width="1.6"
+									stroke-linecap="round" />
+							</svg>
+						</a>
+					</li>
+					<li class="catalog-menu__item">
+						<a href="#" class="catalog-menu__link">Котельное оборудование дочерняя 3</a>
+					</li>
+				</ul>
+			</div>
+			<div class="catalog-menu__column"></div>
+		</div>
+	</div>
 	<nav id="menu" class="d-lg-none">
-		<header>
-			<h2>Menu</h2>
+		<header class="pages-links">
+			<a class="pages-links__item" href="#">Каталог товаров</a>
+			<a class="pages-links__item" href="#">О нас</a>
+			<a class="pages-links__item" href="#">Доставка и оплата</a>
+			<a class="pages-links__item" href="#">Контакты</a>
+			<a class="pages-links__item" href="#">Вход</a>
 		</header>
 	</nav>
 	<div id="panel">
@@ -125,11 +226,20 @@
 						</a>
 						<!-- </h1> -->
 						<div class="site-header__catalog d-none d-lg-block">
-							<a href="#" class="site-header__catalog-toggler">
+							<a href="#catalog-menu" class="site-header__catalog-action site-header__catalog-action--revealer" id="catalog-menu-revealer">
 								<svg width="15" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M14.5 9.333V10H.5v-.667h14zm0-4.166v.666H.5v-.666h14zm0-3.5H.5V1h14v.667z"
 										fill="#fff" stroke="#D24A43" />
+								</svg>
+								<span class="site-header__catalog-text">Каталог</span>
+							</a>
+							<a href="#catalog-menu" class="site-header__catalog-action site-header__catalog-action--concealer" id="catalog-menu-concealer" style="display: none;">
+								<svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M7.12082 7.50439L0.690929 1.07451C0.442763 0.834832 0.435883 0.439377 0.675557 0.19121C0.915232 -0.056956 1.31069 -0.0638373 1.55885 0.175837C1.56405 0.180852 1.56918 0.185976 1.57423 0.19121L8.00415 6.6211L14.434 0.191174C14.6822 -0.0485008 15.0777 -0.0416195 15.3173 0.206547C15.5511 0.448637 15.5511 0.832416 15.3173 1.07451L8.88745 7.50439L15.3173 13.9343C15.5612 14.1782 15.5612 14.5737 15.3173 14.8176C15.0734 15.0614 14.678 15.0614 14.434 14.8176L8.00415 8.38769L1.57426 14.8176C1.3261 15.0572 0.930641 15.0504 0.690967 14.8022C0.457185 14.5601 0.457185 14.1763 0.690967 13.9343L7.12082 7.50439Z"
+										fill="#D24A43" />
 								</svg>
 								<span class="site-header__catalog-text">Каталог</span>
 							</a>
@@ -719,8 +829,8 @@
 			</div>
 			<div class="site-footer__bottom">
 				<div class="container">
-					<div class="row">
-						<div class="col-3">
+					<div class="row aic">
+						<div class="col-3 col-md-2 col-lg-4">
 							<div class="site-footer__socials">
 								<a href="https://www.instagram.com/" target="_blank" rel="noopener nofollow" class="site-footer__socials-link">
 									<svg width="17" height="16" viewBox="0 0 17 16" fill="none"
@@ -732,7 +842,7 @@
 								</a>
 							</div>
 						</div>
-						<div class="col-9 col-md-6 col-lg-5 text-center">
+						<div class="col-9 col-md-4 col-lg-4 text-right text-lg-center">
 							<svg class="site-footer__payment" width="34" height="22" viewBox="0 0 34 22" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<g>
@@ -798,7 +908,7 @@
 							</svg>
 
 						</div>
-						<div class="col-lg-4">
+						<div class="col-md-6 col-lg-4 text-md-right">
 							<div class="site-footer__copy">© 2020 ООО «EUROTEC». Все права защищены.</div>
 						</div>
 					</div>
