@@ -44,7 +44,12 @@
 
     &-link {
       color: $white;
-      margin-right: 1.5em;
+      @include media-breakpoint-up(sm) {
+        margin-right: 1.5em;
+      }
+      &--core {
+        text-decoration: underline;
+      }
       &:hover {
         color: $valencia;
       }
@@ -117,7 +122,7 @@
 
   &__catalog {
     position: relative;
-    
+
     &-action {
       font-size: 14px;
       font-weight: bold;
