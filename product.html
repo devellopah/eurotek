@@ -336,7 +336,7 @@
         <div class="col-xl-4 order-lg-last">
           <div class="row">
             <div class="col-md-6 col-xl-12">
-              <div class="m-b-6 product__cart" id="cart-flyer">
+              <div class="m-b-6 product__cart js-product" id="cart-flyer">
                 <form id="cart-form" method="post" action="">
                   <div class="purchase">
                     <!-- price -->
@@ -345,18 +345,18 @@
                         <div class="col-6">
                           <span class="product__add2cart-text">Кол-во штук</span>
                           <span class="qty">
-                            <span class="qty__action qty__action--inc">
-                              <svg width="14" height="2" viewBox="0 0 14 2" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14 2H0V0H14V2Z" fill="#1D1919" />
-                              </svg>
-                            </span>
-                            <input class="qty__val qty__val--bigger" type="number" name="quantity" min="1"
-                              max="" step="1" value="1">
-                            <span class="qty__action qty__action--dec">
+                            <span class="qty__action qty__action--inc js-inc">
                               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="#1D1919" />
+                              </svg>
+                            </span>
+                            <input class="qty__val qty__val--bigger js-qty" type="number" name="quantity"
+                              min="1" max="" step="1" value="1">
+                            <span class="qty__action qty__action--dec js-dec">
+                              <svg width="14" height="2" viewBox="0 0 14 2" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H0V0H14V2Z" fill="#1D1919" />
                               </svg>
                             </span>
                           </span>
@@ -369,7 +369,7 @@
                           </span>
                         </div>
                       </div>
-                      <button class="btn w-full m-t-4" type="submit">
+                      <button class="btn w-full m-t-4 js-submit" type="submit">
                         <svg class="m-r-2" width="24" height="24" viewBox="0 0 24 24"
                           fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
@@ -536,7 +536,7 @@
       <h3 class="title-2">С этим товаром покупают</h3>
       <div class="row">
         <div class="col-sm-6 col-lg-3">
-          <div class="product-card js-product-card">
+          <div class="product-card js-product">
   <div class="product-card__top">
     <span class="product-card__icons">
       <a class="product-card__icons-item" href="#">
@@ -615,7 +615,7 @@
         </div>
         <div class="flex">
           <!-- <a href="#" class="product-card__more">Подробнее</a> -->
-          <button class="btn w-full product-card__submit" type="submit">
+          <button class="btn w-full product-card__submit js-submit" type="submit">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -632,7 +632,7 @@
 
         </div>
         <div class="col-sm-6 col-lg-3">
-          <div class="product-card js-product-card">
+          <div class="product-card js-product">
   <div class="product-card__top">
     <span class="product-card__icons">
       <a class="product-card__icons-item" href="#">
@@ -711,7 +711,7 @@
         </div>
         <div class="flex">
           <!-- <a href="#" class="product-card__more">Подробнее</a> -->
-          <button class="btn w-full product-card__submit" type="submit">
+          <button class="btn w-full product-card__submit js-submit" type="submit">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -728,7 +728,7 @@
 
         </div>
         <div class="col-sm-6 col-lg-3">
-          <div class="product-card js-product-card">
+          <div class="product-card js-product">
   <div class="product-card__top">
     <span class="product-card__icons">
       <a class="product-card__icons-item" href="#">
@@ -807,7 +807,7 @@
         </div>
         <div class="flex">
           <!-- <a href="#" class="product-card__more">Подробнее</a> -->
-          <button class="btn w-full product-card__submit" type="submit">
+          <button class="btn w-full product-card__submit js-submit" type="submit">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -824,7 +824,7 @@
 
         </div>
         <div class="col-sm-6 col-lg-3">
-          <div class="product-card js-product-card">
+          <div class="product-card js-product">
   <div class="product-card__top">
     <span class="product-card__icons">
       <a class="product-card__icons-item" href="#">
@@ -903,7 +903,7 @@
         </div>
         <div class="flex">
           <!-- <a href="#" class="product-card__more">Подробнее</a> -->
-          <button class="btn w-full product-card__submit" type="submit">
+          <button class="btn w-full product-card__submit js-submit" type="submit">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
