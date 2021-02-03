@@ -8,7 +8,7 @@
   }
   &__top {
     color: $white;
-    font-weight: 700;
+    font-weight: 500;
     background-color: $codgray;
     padding: 6.5px 0;
     position: relative;
@@ -57,7 +57,10 @@
   }
 
   &__tel {
-    color: inherit;
+    color: $white;
+    &:hover {
+      color: $valencia;
+    }
   }
 
   &__contacts {
@@ -125,7 +128,7 @@
 
     &-action {
       font-size: 14px;
-      font-weight: bold;
+      font-weight: 700;
       color: $valencia;
       border-width: 2px;
       border-style: solid;

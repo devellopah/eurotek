@@ -3,10 +3,13 @@
 
   &__cleansing {
     position: absolute;
-    color: $valencia;
     right: -24px;
     top: -64px;
     border-bottom: 1px dashed currentColor;
+
+    &:hover {
+      color: $valencia;
+    }
 
     @include media-breakpoint-down(md) {
       right: -14px;
@@ -48,7 +51,7 @@
 
     &--total {
       font-size: 24px;
-      font-weight: 600;
+      font-weight: 500;
     }
   }
 }

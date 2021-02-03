@@ -69,7 +69,7 @@
 .select2-container--default .select2-selection--single .select2-selection__rendered {
   font-size: 13px;
   line-height: 50px;
-  font-weight: 600;
+  font-weight: 500;
   color: $codgray;
 }
 
@@ -84,7 +84,7 @@
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
-  background-image: url(../../images/dist/icons/select-arrow.svg);
+  background-image: url(../images/dist/icons/select-arrow.svg);
   background-color: transparent;
   background-size: contain;
   border: none !important;

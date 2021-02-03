@@ -2,12 +2,10 @@
   &__gallery {
 
   }
-
   &__media {
     text-align: center;
     background-color: $white;
   }
-
   &__image {
     width: 100%;
     max-width: 400px;
@@ -67,7 +65,7 @@
     &-actual {
       color: $codgray;
       font-size: 36px;
-      font-weight: 600;
+      font-weight: 700;
     }
   }
   &__icons {
@@ -88,7 +86,7 @@
   }
   &__tab {
     color: $gray;
-    font-weight: 600;
+    font-weight: 500;
     margin-right: 16px;
     display: inline-block;
 
@@ -111,5 +109,11 @@
     font-size: 14px;
     color: $gray;
     margin-bottom: 40px;
+  }
+  &__relate {
+    &-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
   }
 }
